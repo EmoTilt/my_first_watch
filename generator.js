@@ -1,7 +1,6 @@
 var fs = require("fs")
 
-var content = `var fs = require("fs")
-var stdin = process.openStdin();
+var content = `var stdin = process.openStdin();
 var date = new Date();
 var hours = date.getHours()
 var minutes = date.getMinutes()
