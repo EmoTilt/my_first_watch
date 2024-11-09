@@ -1,9 +1,9 @@
-var fs = require("fs")
+const fs = require("fs")
 
-var content = `var date = new Date();
-var hours = date.getHours()
-var minutes = date.getMinutes()
-var seconds = date.getSeconds()`
+let content = `let date = new Date();
+let hours = date.getHours()
+let minutes = date.getMinutes()
+let seconds = date.getSeconds()`
 
 for (let h = 0; h < 24; h++) {
     for (let m = 0; m < 60; m++) {
@@ -15,8 +15,7 @@ for (let h = 0; h < 24; h++) {
 
 fs.writeFile('index.js', content, (err) => {
     if (err) {
-      console.error(err)
-      return
+      return console.error(err)
     }
     //файл записан успешно
-  })
+})
